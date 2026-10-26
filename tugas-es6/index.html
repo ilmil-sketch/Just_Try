@@ -135,15 +135,18 @@
       .reduce((acc, { subtotal }) => acc + subtotal, 0);
 
     // CETAK KE CONSOLE (BERBENTUK TABEL RAPI)
+    // CETAK KE CONSOLE DENGAN FORMAT TABEL
     console.log('--- DATA TRANSAKSI BELANJA ---');
-    console.table(transaksi);
+    console.table(transaksi); // <-- Pastikan memakai .table, bukan .log
 
     console.log('\n--- HASIL FILTER (Kategori: ' + kategoriDicari + ') ---');
-    console.table(hasilFilter);
+    console.table(hasilFilter); // <-- Pastikan memakai .table
 
     console.log('\n--- SUBTOTAL SETIAP BARANG ---');
-    console.table(subtotalSemua);
+    console.table(subtotalSemua); // <-- Pastikan memakai .table
 
+    console.log('\nTotal Belanja Keseluruhan: Rp' + totalBelanja.toLocaleString('id-ID'));
+    console.log('Total Kategori ' + kategoriDicari + ': Rp' + totalKategori.toLocaleString('id-ID'));
     console.log('\nTotal Belanja Keseluruhan: Rp' + totalBelanja.toLocaleString('id-ID'));
     console.log('Total Kategori ' + kategoriDicari + ': Rp' + totalKategori.toLocaleString('id-ID'));
 
