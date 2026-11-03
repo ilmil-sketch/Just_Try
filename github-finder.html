@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Finder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      padding-top: 40px;
+    }
+    .card {
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 10px;
+      width: 320px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    form {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    input {
+      flex: 1;
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+    }
+    button {
+      padding: 8px 14px;
+      background-color: #0969da;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0353b4;
+    }
+    #loading {
+      display: none;
+      color: #0969da;
+      margin-bottom: 12px;
+    }
+    .error {
+      color: #cf222e;
+      margin-bottom: 12px;
+    }
+    .profile img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .profile h3 {
+      margin: 4px 0;
+    }
+    .profile p {
+      color: #57609a;
+      font-size: 14px;
+      margin: 6px 0;
+    }
+    .profile a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #0969da;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .profile a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Cari Profil GitHub</h2>
+
+    <!-- Form Input -->
+    <form id="search-form">
+      <input type="text" id="username-input" placeholder="Masukkan username..." required>
+      <button type="submit">Cari</button>
+    </form>
+
+    <!-- Indikator Loading -->
+    <div id="loading">Memuat data...</div>
+
+    <!-- Tempat Hasil Profil / Error Muncul -->
+    <div id="result-container"></div>
+  </div>
+
+  <script src="github-finder.js"></script>
+</body>
+</html>
